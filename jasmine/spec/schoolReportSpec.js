@@ -14,4 +14,8 @@ describe("schoolReport", () => {
     string = "Red";
     expect(schoolReport(string)).toEqual("Red: 1");
   })
+  it("takes multiple colours as input and outputs correct counts", () => {
+    var string = "Green, Amber";
+    expect(schoolReport(string)).toEqual("Green: 1\nAmber: 1");
+  })
 })

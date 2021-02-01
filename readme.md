@@ -13,6 +13,7 @@ INPUT | OUTPUT
 "Green"| "Green: 1"
 "Amber" |"Amber: 1"
 "Red" |"Red: 1" 
+"Green, Amber" | "Green: 1, Amber: 1"
 
 
 Edge Case: 
