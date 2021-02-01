@@ -30,4 +30,8 @@ describe("schoolReport", () => {
     var string = "Green, Amber, Red";
     expect(schoolReport(string)).toEqual("Green: 1\nAmber: 1\nRed: 1");
   })
+  it("can output accurate counts for >1 instance of colour", () => {
+    var string = "Green, Green"
+    expect(schoolReport(string)).toEqual("Green: 2")
+  })
 })

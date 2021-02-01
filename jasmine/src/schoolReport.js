@@ -1,12 +1,16 @@
 function schoolReport(string) {
   var colourArray = string.split(",")
-  console.log("hello", colourArray)
   var outputColourArray = [];
+  var green = 0;
+  var amber = 0;
+  var red = 0;
     colourArray.forEach((colour) => {
-    if(colour === "Green" || colour === " Green") outputColourArray.push("Green: 1");
-    if(colour === "Amber" || colour === " Amber") outputColourArray.push("Amber: 1");
-    if(colour === "Red" || colour === " Red") outputColourArray.push("Red: 1");
+    if(colour === "Green" || colour === " Green")  green += 1;
+    if(colour === "Amber" || colour === " Amber") amber += 1;
+    if(colour === "Red" || colour === " Red") red += 1;
   })
-  console.log(outputColourArray)
+  if(green > 0) outputColourArray.push(`Green: ${green}`)
+  if(amber >0) outputColourArray.push(`Amber: ${amber}`)
+  if(red >0) outputColourArray.push(`Red: ${red}`)
   return outputColourArray.join("\n")
 }
