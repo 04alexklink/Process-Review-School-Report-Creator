@@ -17,6 +17,8 @@ INPUT | OUTPUT
 "Green, Green" | "Green: 2"
 "Green, Amber, Amber, Red, Green, Red" | "Green:2\nAmber:2\nRed:2"
 "Green, Yellow, Blue, Green, Red" | "Green:2\nRed:1\nUnrecognised Colour:2"
+[] | Throw error: "Data input was not a string"
+
 Edge Case: 
 - if system sees unrecognised colour, include separate uncounted category
 - Data type other than string should output an error

@@ -1,4 +1,5 @@
 function schoolReport(string) {
+  if(typeof(string) !== "string") throw new Error("Data input was not a string");
   var colourArray = string.split(",")
   var outputColourArray = [];
   var green = 0;
