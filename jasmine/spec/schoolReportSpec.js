@@ -28,7 +28,7 @@ describe("schoolReport", () => {
       var string = "Green, Yellow, Blue, Green, Red";
       expect(schoolReport(string)).toEqual("Green: 2\nRed: 1\nUnrecognised Colour: 2");
     })
-    it("throw error if data type other than string inputted", () => {
+    it("throws error if data type other than string inputted", () => {
       var array = [];
       expect(function() {schoolReport(array)}).toThrowError("Data input was not a string");
     })

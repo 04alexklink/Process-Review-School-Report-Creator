@@ -1,23 +1,22 @@
-# ProcessReview
+# ProcessReview School Report Challenge
 Client Requirements:
 School reports company
-Input: string of school reports
-Build a report that outputs a string
-Example input csv: 3 types green amber red
-Example output: Count of grade types
+Application needed to create a report from an input of a string of comma separated values based on Green Amber Red system. 
+Output should be a string with a tag for each colour score that appeared in the input, as well as a count of how often that colour occured in the input string. Each colour outputted should be separated by a line break. 
+If a colour doesn't appear in the input string, don't include it in output string with a count of 0, just leave it out. 
 
-"Green, Red, Amber, Red"
-"Green: 1 \n Amber: 1\n Red: 2"
+Example input csv: "Green, Red, Amber, Red"
+Example output: "Green: 1 \n Amber: 1\n Red: 2"
 
-INPUT | OUTPUT
-"Green"| "Green: 1"
-"Amber" |"Amber: 1"
-"Red" |"Red: 1" 
-"Green, Amber" | "Green: 1\nAmber: 1"
-"Green, Green" | "Green: 2"
+INPUT               | OUTPUT
+"Green"             | "Green: 1"
+"Amber"             |"Amber: 1"
+"Red"               |"Red: 1" 
+"Green, Amber"      | "Green: 1\nAmber: 1"
+"Green, Green"      | "Green: 2"
 "Green, Amber, Amber, Red, Green, Red" | "Green:2\nAmber:2\nRed:2"
-"Green, Yellow, Blue, Green, Red" | "Green:2\nRed:1\nUnrecognised Colour:2"
-[] | Throw error: "Data input was not a string"
+"Green, Yellow, Blue, Green, Red"      | "Green:2\nRed:1\nUnrecognised Colour:2"
+[]                  | Throw error: "Data input was not a string"
 
 Edge Case: 
 - if system sees unrecognised colour, include separate uncounted category

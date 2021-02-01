@@ -1,7 +1,6 @@
 function schoolReport(string) {
   _isStringInput(string);
   var colourArray = string.split(",")
-  var outputColourArray = [];
   var green = 0, amber = 0, red = 0, unknown = 0;
   colourArray.forEach((colour) => {
     if(_isGreenColour(colour)) {
@@ -13,6 +12,7 @@ function schoolReport(string) {
       red += 1;
     } else unknown += 1;
   })
+  var outputColourArray = [];
   if(green > 0) outputColourArray.push(`Green: ${green}`)
   if(amber >0) outputColourArray.push(`Amber: ${amber}`)
   if(red >0) outputColourArray.push(`Red: ${red}`)
