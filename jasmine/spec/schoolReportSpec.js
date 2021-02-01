@@ -9,9 +9,9 @@ describe("schoolReport", () => {
     string = "Amber";
     expect(schoolReport(string)).toEqual("Amber: 1");
   })
-  // it("takes single colour string input and returns it with a count as output", () => {
-  //   var string;
-  //   string = "Red";
-  //   expect(schoolReport(string)).toEqual("Red: 1");
-  // })
+  it("takes single colour string input and returns it with a count as output", () => {
+    var string;
+    string = "Red";
+    expect(schoolReport(string)).toEqual("Red: 1");
+  })
 })
