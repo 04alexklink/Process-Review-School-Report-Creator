@@ -2,18 +2,14 @@ function schoolReport(string) {
   _isStringInput(string);
   var colourArray = string.split(",")
   var outputColourArray = [];
-  var green = 0;
-  var amber = 0;
-  var red = 0;
-  var unknown = 0;
-
+  var green = 0, amber = 0, red = 0, unknown = 0;
   colourArray.forEach((colour) => {
-    if(colour === "Green" || colour === " Green") {
+    if(_isGreenColour(colour)) {
       green += 1;
-    } else if(colour === "Amber" || colour === " Amber") {
+    } else if(_isAmberColour(colour)) {
       amber += 1;
     }
-    else if(colour === "Red" || colour === " Red") { 
+    else if(_isRedColour(colour)) { 
       red += 1;
     } else unknown += 1;
   })
@@ -26,4 +22,16 @@ function schoolReport(string) {
 
 function _isStringInput(string) {
   if(typeof(string) !== "string") throw new Error("Data input was not a string");
+}
+
+function _isGreenColour(colour) {
+  return (colour === "Green" || colour === " Green")
+}
+
+function _isAmberColour(colour) {
+  return (colour === "Amber" || colour === " Amber")
+}
+
+function _isRedColour(colour) {
+  return (colour === "Red" || colour === " Red")
 }
