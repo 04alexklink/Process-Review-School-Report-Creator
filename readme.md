@@ -14,10 +14,8 @@ INPUT | OUTPUT
 "Amber" |"Amber: 1"
 "Red" |"Red: 1" 
 "Green, Amber" | "Green: 1\nAmber: 1"
-"Green, Red" | "Green:1\nRed:1"
-"Amber, Red" | "Amber:1\nRed:1"
-"Green, Amber, Red" | "Green:1\nAmber:1\nRed:1"
 "Green, Green" | "Green: 2"
+"Green, Amber, Amber, Red, Green, Red" | "Green:2\nAmber:2\nRed:2"
 
 Edge Case: 
 - if system sees unrecognised colour, include separate uncounted category
