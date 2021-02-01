@@ -1,17 +1,14 @@
 describe("schoolReport", () => {
   it("takes single colour string input and returns it with a count as output", () => {
-    var string;
-    string = "Green";
+    var string = "Green";
     expect(schoolReport(string)).toEqual("Green: 1");
   })
   it("takes single colour string input and returns it with a count as output", () => {
-    var string;
-    string = "Amber";
+    var string = "Amber";
     expect(schoolReport(string)).toEqual("Amber: 1");
   })
   it("takes single colour string input and returns it with a count as output", () => {
-    var string;
-    string = "Red";
+    var string = "Red";
     expect(schoolReport(string)).toEqual("Red: 1");
   })
   it("takes multiple colours as input and outputs correct counts", () => {
@@ -25,5 +22,11 @@ describe("schoolReport", () => {
   it("can output accurate counts for multiple colours with >1 instance", () => {
     var string = "Green, Amber, Amber, Red, Green, Red";
     expect(schoolReport(string)).toEqual("Green: 2\nAmber: 2\nRed: 2")
+  })
+  describe("edge case", () => {
+    it("can output a count of unknown colours (not G, A or R)", () => {
+      var string = "Green, Yellow, Blue, Green, Red";
+      expect(schoolReport(string)).toEqual("Green: 2\nRed: 1\nUnrecognised Colour: 2");
+    })
   })
 })

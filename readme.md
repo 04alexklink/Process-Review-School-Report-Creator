@@ -16,7 +16,11 @@ INPUT | OUTPUT
 "Green, Amber" | "Green: 1\nAmber: 1"
 "Green, Green" | "Green: 2"
 "Green, Amber, Amber, Red, Green, Red" | "Green:2\nAmber:2\nRed:2"
-
+"Green, Yellow, Blue, Green, Red" | "Green:2\nRed:1\nUnrecognised Colour:2"
 Edge Case: 
 - if system sees unrecognised colour, include separate uncounted category
 - Data type other than string should output an error
+
+Feedback: 
+-I had 3 redundant tests, which I knew were all going to pass but stuck them in anyway. Once I had done the >1 colour in the string test, i did not need to test for all combinations of >1 colour. "Green, Amber" was sufficient.
+- I needed to spend more time at the start getting requirements. Also if I had spent time at the beginning going over expected input/output for all tests I thought I would need, the client could have clarified with me what they would like to happen for edge cases, and how I could expect the data to be inputted accurately, rather than make assumptions about capitalisation and how to handle spaces between colours in the input string, which I assumed would be there but had I of asked, they could have confirmed this or not.  
