@@ -1,5 +1,5 @@
 function schoolReport(string) {
-  if(typeof(string) !== "string") throw new Error("Data input was not a string");
+  _isStringInput(string);
   var colourArray = string.split(",")
   var outputColourArray = [];
   var green = 0;
@@ -22,4 +22,8 @@ function schoolReport(string) {
   if(red >0) outputColourArray.push(`Red: ${red}`)
   if(unknown > 0) outputColourArray.push(`Unrecognised Colour: ${unknown}`)
   return outputColourArray.join("\n")
+}
+
+function _isStringInput(string) {
+  if(typeof(string) !== "string") throw new Error("Data input was not a string");
 }
